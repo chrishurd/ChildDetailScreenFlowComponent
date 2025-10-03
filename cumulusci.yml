@@ -1,0 +1,27 @@
+minimum_cumulusci_version: '4.6.0'
+project:
+    name: ChildDetailScreenFlowComponent
+    package:
+        name: ChildDetailScreenFlowComponent
+        api_version: '63.0'
+    git:
+        default_branch: 'main'
+    test:
+        name_match: '%Test%'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/ChildDetailScreenFlowComponent/tests
+            options:
+                outputdir: robot/ChildDetailScreenFlowComponent/results
+
+    robot_testdoc:
+        options:
+            path: robot/ChildDetailScreenFlowComponent/tests
+            output: robot/ChildDetailScreenFlowComponent/doc/ChildDetailScreenFlowComponent_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
